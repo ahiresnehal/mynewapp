@@ -24,9 +24,9 @@ pipeline {
                                                      //sh 'docker tag demo2 snehalahire123/demo2:1.2'
                                                      //sh 'docker tag nginxte snehalahire123/nginxte:$BUILD_NUMBER'
                                                 
-                                                sh 'docker build -t mynewappimg .'
-                                                 sh 'docker tag mynewappimg snehalahire123/mynewappimg'
-                                                 sh 'docker tag mynewappimg snehalahire123/mynewappimg:$BUILD_NUMBER'
+                                                sh 'docker build -t mynewapp .'
+                                                 sh 'docker tag mynewapp snehalahire123/mynewapp'
+                                                 sh 'docker tag mynewapp snehalahire123/mynewapp:$BUILD_NUMBER'
                                                        }
                                                        }
        /* stage('Publish image to Docker Hub') {
