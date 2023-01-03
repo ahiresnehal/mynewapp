@@ -26,17 +26,17 @@ pipeline {
                                                 
                                                 sh 'docker build -t mynewapp .'
                                                  sh 'docker tag mynewapp snehalahire123/mynewapp'
-                                                 sh 'docker tag mynewapp snehalahire123/mynewapp:$BUILD_NUMBER'
+                                                 //sh 'docker tag mynewapp snehalahire123/mynewapp:$BUILD_NUMBER'
                                                        }
                                                        }
-       /* stage('Publish image to Docker Hub') {
+        stage('Publish image to Docker Hub') {
                                                           steps {
                                                              withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-                                                             sh 'docker push snehalahire123/my-nginx-image'
-                                                              //sh 'docker push snehalahire123/nginxte:$BUILD_NUMBER' 
+                                                             sh 'docker push snehalahire123/mynewapp'
+                                                              //sh 'docker push snehalahire123/mynewapp:$BUILD_NUMBER' 
                                                               }
                                                               }
-                                                              }*/
+                                                              }
        /* stage('deploy to rancher') {
                                        steps {
                                         script{  
