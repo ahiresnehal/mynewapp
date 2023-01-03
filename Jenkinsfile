@@ -17,18 +17,18 @@ pipeline {
                                                         }
                                                         }
             
-      /*  stage('Docker Build and Tag') {
+        stage('Docker Build and Tag') {
                                               steps {
                                                    //sh 'docker build -t nginxt:1.2 .' 
                                                      //sh 'docker build -t demo2:latest .' 
                                                      //sh 'docker tag demo2 snehalahire123/demo2:1.2'
                                                      //sh 'docker tag nginxte snehalahire123/nginxte:$BUILD_NUMBER'
                                                 
-                                                sh 'docker build -t my-nginx-image .'
-                                                 sh 'docker tag nginxtest snehalahire123/my-nginx-image'
-                                                 sh 'docker tag nginxtest snehalahire123/my-nginx-image:$BUILD_NUMBER'
+                                                sh 'docker build -t mynewappimg .'
+                                                 sh 'docker tag mynewappimg snehalahire123/mynewappimg'
+                                                 sh 'docker tag mynewappimg snehalahire123/mynewappimg:$BUILD_NUMBER'
                                                        }
-                                                       }*/
+                                                       }
        /* stage('Publish image to Docker Hub') {
                                                           steps {
                                                              withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
