@@ -41,7 +41,8 @@ pipeline {
                                                               }
        /* stage('deploy to rancher') {
         withKubeConfig([credentialsId: 'rancher', serverUrl: 'https://3.109.117.88/']) {
-      sh 'kubectl apply -f my-kubernetes-directory'
+      sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
+      sh 'kubectl get pods'
     }
                                        
                                                  }*/
