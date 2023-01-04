@@ -42,10 +42,11 @@ pipeline {
                stage('deploy to rancher') {
                                      steps {
                                                echo 'continuous deployment'
-                                       withKubeConfig([credentialsId: 'rancherkubeconfig', serverUrl: 'https://3.109.117.88']){
-                                       sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
-                                       sh 'kubectl get pods'
-                                       }
+                                       withKubeConfig([credentialsId: 'rancherkubeconfig', serverUrl: 'https://3.109.117.88'])
+                                       //{
+                                       //sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
+                                       //sh 'kubectl get pods'
+                                       //}
                                        
                                                }
                                                }
