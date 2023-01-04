@@ -14,6 +14,8 @@ pipeline {
                          stage('git clone') {
                                               steps {
                                          git credentialsId: 'github', url: 'https://github.com/ahiresnehal/mynewapp.git'
+                                                sh 'ls'
+                                                sh 'pwd'
                                                         }
                                                         }
             
@@ -38,14 +40,10 @@ pipeline {
                                                               }
                                                               }
        /* stage('deploy to rancher') {
-                                       steps {
-                                        script{  
-                                                 sh 'docker pull snehalahire123/my-nginx-image:latest'
-                                                 sh 'docker images'
-                                                 sh 'ls'
-                                                
-                                                 }
-                                                 }
+        withKubeConfig([credentialsId: 'rancher', serverUrl: 'https://3.109.117.88/']) {
+      sh 'kubectl apply -f my-kubernetes-directory'
+    }
+                                       
                                                  }*/
   }
   }
