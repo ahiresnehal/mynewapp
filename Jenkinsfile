@@ -39,9 +39,9 @@ pipeline {
                                                               }
                                                               }
                                                               }
-               stage('Hello') {
+               stage('deploy') {
                                      steps {
-                                               echo 'Hello World'
+                                               echo 'cd'
                                                }
                                                }
               
