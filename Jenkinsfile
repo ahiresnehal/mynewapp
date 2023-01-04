@@ -39,13 +39,22 @@ pipeline {
                                                               }
                                                               }
                                                               }
-       stage('deploy to rancher') {
-         echo 'deployment'
+               stage('Hello') {
+                                     steps {
+                                               echo 'Hello World'
+                                               }
+                                               }
+              
+              
+              
+              
+       //stage('deploy to rancher') {
+         //echo 'deployment'
          //withKubeConfig([credentialsId: 'rancherkubeconfig', serverUrl: 'https://3.109.117.88']) {
          //sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
          //sh 'kubectl get pods'
-         }
-       }
+         //}
+       //}
               
               
   }
