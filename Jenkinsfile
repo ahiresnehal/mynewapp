@@ -39,9 +39,9 @@ pipeline {
                                                               }
                                                               }
                                                               }
-               stage('deploy') {
+               stage('deploy to rancher') {
                                      steps {
-                                               echo 'cd'
+                                               echo 'continuous deployment'
                                                }
                                                }
               
