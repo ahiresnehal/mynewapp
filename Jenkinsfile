@@ -72,7 +72,7 @@ pipeline {
          sh 'ls'
          sh 'pwd'
          sh 'whoami'
-         sh 'sudo su snehal'
+         sh 'sudo su snehal -s /bin/bash'
          sh 'whoami'
          
          //sh 'sudo kubectl get all'
