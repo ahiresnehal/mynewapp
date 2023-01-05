@@ -74,7 +74,6 @@ pipeline {
          sh 'whoami'
          sh 'sudo su snehal -s /bin/bash'
          sh 'whoami'
-         sh 'export KUBECONFIG=~/.kube/config'
          sh 'kubectl get nodes'
          
          //sh 'sudo kubectl get all'
