@@ -39,7 +39,7 @@ pipeline {
                                                               }
                                                               }
                                                               }
-               stage('deploy to rancher') {
+              /* stage('deploy to rancher') {
                                      steps {
                                                echo 'continuous deployment'
                                        withKubeConfig([credentialsId: 'rancher',
@@ -52,11 +52,21 @@ pipeline {
       sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
       sh 'kubectl get pods'
     }
-                                       
-                                               }
-                                               }
+            }
+                     }*/
               
               
+              stage('Deploy') {
+    withKubeConfig([credentialsId: 'localcluster',
+                    //caCertificate: '<ca-certificate>',
+                    serverUrl: 'https://192.168.56.109:6443',
+                    //contextName: '<context-name>',
+                    //clusterName: '<cluster-name>',
+                    //namespace: '<namespace>'
+                    ]) {
+      sh 'kubectl get pods'
+    }
+  }
               
               
        //stage('deploy to rancher') {
