@@ -66,10 +66,10 @@ pipeline {
                     //clusterName: '<cluster-name>',
                     //namespace: '<namespace>'
                     ])
-       /*{
-      sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
+       {
+      //sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
       sh 'kubectl get pods'
-                                       }*/
+                                       }
                                      }
               }
               
