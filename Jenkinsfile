@@ -70,6 +70,8 @@ pipeline {
       //sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
       //sh 'kubectl get pods'
          sh 'ls'
+         sh 'kubectl apply -f deploymentservice.yaml'
+         sh 'kubectl get pods'
                                        }
                                      }
               }
