@@ -71,7 +71,9 @@ pipeline {
       //sh 'kubectl get pods'
          sh 'ls'
          sh 'pwd'
-         sh 'kubectl apply -f deploymentservice.yaml'
+         sh 'whoami'
+         sh 'kubectl get all'
+         //sh 'kubectl apply -f deploymentservice.yaml'
          //sh 'kubectl get pods'
                                        }
                                      }
