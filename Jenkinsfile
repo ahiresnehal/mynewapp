@@ -59,7 +59,7 @@ pipeline {
               stage('deploy to rancher') {
                                      steps {
                                                echo 'continuous deployment'
-                                       withKubeConfig([credentialsId: 'testcluster'])
+                                       withKubeConfig([credentialsId: 'testconfig'])
        {
      
          sh 'kubectl get pods'
