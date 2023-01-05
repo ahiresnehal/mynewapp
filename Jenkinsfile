@@ -59,26 +59,10 @@ pipeline {
               stage('deploy to rancher') {
                                      steps {
                                                echo 'continuous deployment'
-                                       withKubeConfig([credentialsId: 'localcluster',
-                    //caCertificate: '<ca-certificate>',
-                    serverUrl: 'https://192.168.56.109:6443',
-                    //contextName: '<context-name>',
-                    //clusterName: '<cluster-name>',
-                    //namespace: '<namespace>'
-                    ])
+                                       withKubeConfig([credentialsId: 'testcluster'])
        {
-      //sh 'kubectl apply -f /var/lib/jenkins/workspace/Final/deploymentservice.yaml'
-      //sh 'kubectl get pods'
-         sh 'ls'
-         sh 'pwd'
-         sh 'whoami'
-         sh 'sudo su snehal -s /bin/bash'
-         sh 'whoami'
-         sh 'kubectl get nodes'
-         
-         //sh 'sudo kubectl get all'
-         //sh 'kubectl apply -f deploymentservice.yaml'
-         //sh 'kubectl get pods'
+     
+         sh 'kubectl get pods'
                                        }
                                      }
               }
