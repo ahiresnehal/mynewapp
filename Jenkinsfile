@@ -62,7 +62,7 @@ pipeline {
                                        withKubeConfig([credentialsId: 'testconfig'])
        {
      
-         sh 'kubectl get pods'
+         //sh 'kubectl get pods'
          sh 'kubectl apply -f deploymentservice.yaml'
                                        }
                                      }
